@@ -1,8 +1,9 @@
+import Testimonials from '../components/Testimonials'
 
 const Main = () => {
   return (
     <div>
-      Hello World
+      <Testimonials />
     </div>
   )
 }
