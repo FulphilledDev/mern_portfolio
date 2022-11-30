@@ -1,102 +1,122 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
+{/* TODO: Replace/Remove: priceMonthly/Yearly --> startingAt  */}
+{/* TODO: Create request form for Single-Page */}
+{/* TODO: Create request form for Multi-Page */}
+{/* TODO: Create request form for Full-Stack */}
+{/* TODO: Create a quote calculator for site request
+    -- Include: prices per page, section, functionality, etc. */}
+
+
+
+
 const plans = [
   {
-    title: 'Starter',
+    title: 'Single-Page',
     featured: false,
-    description: 'All your essential business finances, taken care of.',
+    description: 'All your essential business information and functionality, to get off to a quick start.',
+    startingAt: 249,
     priceMonthly: 5,
     priceYearly: 56,
     mainFeatures: [
-      { id: 1, value: 'Basic invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
+      { id: 1, value: 'Basic company information' },
+      { id: 2, value: 'Up to 6 Sections' },
+      { id: 3, value: 'Purchasability of Products' },
+      { id: 4, value: '72-Hour Completion Guarantee' },
+      { id: 5, value: '50% Deposit (or $200); Whichever is less' }
     ],
   },
   {
-    title: 'Scale',
+    title: 'Multi-Page',
     featured: true,
-    description: 'The best financial services for your thriving business.',
+    description: 'The best development service for revenue generating businesses.',
+    startingAt: 499,
     priceMonthly: 19,
     priceYearly: 220,
     mainFeatures: [
-      { id: 1, value: 'Advanced invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
-      { id: 4, value: 'Tax planning toolkit' },
-      { id: 5, value: 'VAT & VATMOSS filing' },
-      { id: 6, value: 'Free bank transfers' },
+      { id: 1, value: 'Basic company information' },
+      { id: 2, value: 'Up to 4 pages' },
+      { id: 3, value: 'Purchasability of Products' },
+      { id: 4, value: '2-Week Completion Guarantee' },
+      { id: 5, value: '25% Deposit (or $300); Whichever is less' },
+      { id: 6, value: 'Create and Manage Products and/or Services' },
+      { id: 8, value: '30-Days of Website Maintenance' },
     ],
   },
   {
-    title: 'Growth',
+    title: 'Full-Stack',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
+    startingAt: 799,
     priceMonthly: 12,
     priceYearly: 140,
     mainFeatures: [
-      { id: 1, value: 'Basic invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
-      { id: 4, value: 'Tax planning toolkit' },
+      { id: 1, value: 'Basic company information' },
+      { id: 2, value: 'Up to 6 pages' },
+      { id: 3, value: 'Purchasability of Products and/or Services' },
+      { id: 4, value: '4-Week Completion Guarantee' },
+      { id: 5, value: '20% Deposit (or $400); Whichever is more' },
+      { id: 6, value: 'Create and Manage Products and/or Services' },
+      { id: 7, value: 'Client Account Management' },
+      { id: 8, value: '60-Days of Website Maintenance' },
     ],
   },
 ]
 const features = [
   {
-    title: 'Tax Savings',
+    title: 'Basic company information',
     tiers: [
-      { title: 'starter', value: true },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'single-page', value: true },
+      { title: 'multi-page', featured: true, value: true },
+      { title: 'full-stack', value: true },
     ],
   },
   {
-    title: 'Easy to use accounting',
+    title: 'Mobile and web responsiveness',
     tiers: [
-      { title: 'starter', value: true },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'single-page', value: true },
+      { title: 'multi-page', featured: true, value: true },
+      { title: 'full-stack', value: true },
     ],
   },
   {
-    title: 'Multi-accounts',
+    title: 'Purchasability of products/services',
     tiers: [
-      { title: 'starter', value: '3 accounts' },
-      { title: 'popular', featured: true, value: 'Unlimited accounts' },
-      { title: 'intermediate', value: '7 accounts' },
+      { title: 'single-page', value: true },
+      { title: 'multi-page', featured: true, value: true },
+      { title: 'full-stack', value: true },
     ],
   },
   {
-    title: 'Invoicing',
+    title: 'Website Pages',
     tiers: [
-      { title: 'starter', value: '3 invoices' },
-      { title: 'popular', featured: true, value: 'Unlimited invoices' },
-      { title: 'intermediate', value: '10 invoices' },
+      { title: 'single-page', value: '1' },
+      { title: 'multi-page', featured: true, value: 'Up to 4' },
+      { title: 'full-stack', value: 'Up to 7' },
     ],
   },
   {
-    title: 'Exclusive offers',
+    title: 'Website maintenenance after completion',
     tiers: [
-      { title: 'starter', value: false },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'single-page', value: false },
+      { title: 'multi-page', featured: true, value: '30 Days' },
+      { title: 'full-stack', value: '60 Days' },
     ],
   },
   {
-    title: '6 months free advisor',
+    title: 'Product / Service management',
     tiers: [
-      { title: 'starter', value: false },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'single-page', value: false },
+      { title: 'multi-page', featured: true, value: true },
+      { title: 'full-stack', value: true },
     ],
   },
   {
-    title: 'Mobile and web access',
+    title: 'Client management',
     tiers: [
-      { title: 'starter', value: false },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: false },
+      { title: 'single-page', value: false },
+      { title: 'multi-page', featured: true, value: false },
+      { title: 'full-stack', value: true },
     ],
   },
 ]
@@ -104,66 +124,27 @@ const perks = [
   {
     title: '24/7 customer support',
     tiers: [
-      { title: 'starter', value: true },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'single-page', value: true },
+      { title: 'multi-page', featured: true, value: true },
+      { title: 'full-stack', value: true },
     ],
   },
   {
-    title: 'Instant notifications',
+    title: 'Weekly updates',
     tiers: [
-      { title: 'starter', value: true },
+      { title: 'single-page', value: true },
       { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
-    ],
-  },
-  {
-    title: 'Budgeting tools',
-    tiers: [
-      { title: 'starter', value: true },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'full-stack', value: true },
     ],
   },
   {
     title: 'Digital receipts',
     tiers: [
-      { title: 'starter', value: true },
+      { title: 'single-page', value: true },
       { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
+      { title: 'full-stack', value: true },
     ],
   },
-  {
-    title: 'Pots to separate money',
-    tiers: [
-      { title: 'starter', value: false },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: true },
-    ],
-  },
-  {
-    title: 'Free bank transfers',
-    tiers: [
-      { title: 'starter', value: false },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: false },
-    ],
-  },
-  {
-    title: 'Business debit card',
-    tiers: [
-      { title: 'starter', value: false },
-      { title: 'popular', featured: true, value: true },
-      { title: 'intermediate', value: false },
-    ],
-  },
-]
-
-const metrics = [
-  { id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.' },
-  { id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.' },
-  { id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.' },
-  { id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.' },
 ]
 
 function classNames(...classes) {
@@ -173,46 +154,28 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <div className="bg-gray-50">
-      <div className="relative bg-indigo-600">
+      <div className="relative bg-gradient-to-r from-blue-800 to-teal-700">
         {/* Overlapping background */}
         <div aria-hidden="true" className="absolute bottom-0 hidden h-6 w-full bg-gray-50 lg:block" />
 
         <div className="relative mx-auto max-w-2xl px-4 pt-16 text-center sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
             <span className="block lg:inline">Simple pricing,</span>
-            <span className="block lg:inline">no commitment.</span>
+            <span className="block lg:inline mx-2">desired results.</span>
           </h1>
-          <p className="mt-4 text-xl text-indigo-100">
+          <p className="mt-4 text-xl text-blue-100">
             Everything you need, nothing you don't. Pick a plan that best suits your business.
           </p>
         </div>
 
         <h2 className="sr-only">Plans</h2>
 
-        {/* Toggle */}
-        <div className="relative mt-12 flex justify-center sm:mt-16">
-          <div className="flex rounded-lg bg-indigo-700 p-0.5">
-            <button
-              type="button"
-              className="relative whitespace-nowrap rounded-md border-indigo-700 bg-white py-2 px-6 text-sm font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 focus:z-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700"
-            >
-              Monthly billing
-            </button>
-            <button
-              type="button"
-              className="relative ml-0.5 whitespace-nowrap rounded-md border border-transparent py-2 px-6 text-sm font-medium text-indigo-200 hover:bg-indigo-800 focus:z-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700"
-            >
-              Yearly billing
-            </button>
-          </div>
-        </div>
-
         {/* Cards */}
         <div className="relative mx-auto mt-8 max-w-2xl px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
           {/* Decorative background */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 top-4 bottom-6 left-8 right-8 hidden rounded-tl-lg rounded-tr-lg bg-indigo-700 lg:block"
+            className="absolute inset-0 top-4 bottom-6 left-8 right-8 hidden rounded-tl-lg rounded-tr-lg bg-gradient-to-r from-blue-700 to-teal-600 lg:block"
           />
 
           <div className="relative space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0">
@@ -220,32 +183,29 @@ export default function Example() {
               <div
                 key={plan.title}
                 className={classNames(
-                  plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
+                  plan.featured ? 'bg-white ring-2 ring-blue-700 shadow-md' : 'bg-blue-700 lg:bg-transparent',
                   'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
                 )}
               >
                 <div>
                   <h3
-                    className={classNames(plan.featured ? 'text-indigo-600' : 'text-white', 'text-base font-semibold')}
+                    className={classNames(plan.featured ? 'text-blue-600' : 'text-white', 'text-base font-semibold')}
                   >
                     {plan.title}
                   </h3>
                   <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
-                    <div className="mt-3 flex items-center">
+                    <div className="mt-3 flex items-end">
                       <p
                         className={classNames(
-                          plan.featured ? 'text-indigo-600' : 'text-white',
+                          plan.featured ? 'text-blue-600' : 'text-white',
                           'text-4xl font-bold tracking-tight'
                         )}
                       >
-                        ${plan.priceMonthly}
+                        ${plan.startingAt}
                       </p>
                       <div className="ml-4">
                         <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                          USD / mo
-                        </p>
-                        <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-                          Billed yearly (${plan.priceYearly})
+                          USD
                         </p>
                       </div>
                     </div>
@@ -253,12 +213,12 @@ export default function Example() {
                       href="#"
                       className={classNames(
                         plan.featured
-                          ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                          : 'bg-white text-indigo-600 hover:bg-indigo-50',
+                          ? 'bg-blue-600 text-white hover:bg-blue-700'
+                          : 'bg-white text-blue-600 hover:bg-blue-50',
                         'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                       )}
                     >
-                      Buy {plan.title}
+                      Request {plan.title}
                     </a>
                   </div>
                 </div>
@@ -268,7 +228,7 @@ export default function Example() {
                   className={classNames(
                     plan.featured
                       ? 'border-gray-200 divide-gray-200'
-                      : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
+                      : 'border-blue-500 divide-blue-500 divide-opacity-75',
                     'mt-7 border-t divide-y lg:border-t-0'
                   )}
                 >
@@ -276,7 +236,7 @@ export default function Example() {
                     <li key={mainFeature.id} className="flex items-center py-3">
                       <CheckIcon
                         className={classNames(
-                          plan.featured ? 'text-indigo-500' : 'text-indigo-200',
+                          plan.featured ? 'text-blue-500' : 'text-blue-200',
                           'w-5 h-5 flex-shrink-0'
                         )}
                         aria-hidden="true"
@@ -309,11 +269,11 @@ export default function Example() {
             <div key="plan.title" className="border-t border-gray-200">
               <div
                 className={classNames(
-                  plan.featured ? 'border-indigo-600' : 'border-transparent',
+                  plan.featured ? 'border-blue-600' : 'border-transparent',
                   '-mt-px pt-6 border-t-2 sm:w-1/2'
                 )}
               >
-                <h3 className={classNames(plan.featured ? 'text-indigo-600' : 'text-gray-900', 'text-sm font-bold')}>
+                <h3 className={classNames(plan.featured ? 'text-blue-600' : 'text-gray-900', 'text-sm font-bold')}>
                   {plan.title}
                 </h3>
                 <p className="mt-2 text-sm text-gray-500">{plan.description}</p>
@@ -333,7 +293,7 @@ export default function Example() {
 
                 <div
                   className={classNames(
-                    plan.featured ? 'ring-2 ring-indigo-600 shadow-md' : 'ring-1 ring-black ring-opacity-5 shadow',
+                    plan.featured ? 'ring-2 ring-blue-600 shadow-md' : 'ring-1 ring-black ring-opacity-5 shadow',
                     'relative py-3 px-4 bg-white rounded-lg sm:p-0 sm:bg-transparent sm:rounded-none sm:ring-0 sm:shadow-none'
                   )}
                 >
@@ -348,7 +308,7 @@ export default function Example() {
                           {typeof feature.tiers[mobilePlanIndex].value === 'string' ? (
                             <span
                               className={classNames(
-                                feature.tiers[mobilePlanIndex].featured ? 'text-indigo-600' : 'text-gray-900',
+                                feature.tiers[mobilePlanIndex].featured ? 'text-blue-600' : 'text-gray-900',
                                 'text-sm font-medium'
                               )}
                             >
@@ -357,7 +317,7 @@ export default function Example() {
                           ) : (
                             <>
                               {feature.tiers[mobilePlanIndex].value === true ? (
-                                <CheckIcon className="mx-auto h-5 w-5 text-indigo-600" aria-hidden="true" />
+                                <CheckIcon className="mx-auto h-5 w-5 text-blue-600" aria-hidden="true" />
                               ) : (
                                 <XMarkIcon className="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
                               )}
@@ -377,7 +337,7 @@ export default function Example() {
                 <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden sm:block">
                   <div
                     className={classNames(
-                      plan.featured ? 'ring-2 ring-indigo-600' : 'ring-1 ring-black ring-opacity-5',
+                      plan.featured ? 'ring-2 ring-blue-600' : 'ring-1 ring-black ring-opacity-5',
                       'absolute right-0 w-1/2 h-full rounded-lg'
                     )}
                   />
@@ -399,7 +359,7 @@ export default function Example() {
 
                 <div
                   className={classNames(
-                    plan.featured ? 'ring-2 ring-indigo-600 shadow-md' : 'ring-1 ring-black ring-opacity-5 shadow',
+                    plan.featured ? 'ring-2 ring-blue-600 shadow-md' : 'ring-1 ring-black ring-opacity-5 shadow',
                     'relative py-3 px-4 bg-white rounded-lg sm:p-0 sm:bg-transparent sm:rounded-none sm:ring-0 sm:shadow-none'
                   )}
                 >
@@ -409,7 +369,7 @@ export default function Example() {
                         <dt className="text-sm font-medium text-gray-600 sm:pr-4">{perk.title}</dt>
                         <dd className="text-center sm:px-4">
                           {perk.tiers[mobilePlanIndex].value === true ? (
-                            <CheckIcon className="mx-auto h-5 w-5 text-indigo-600" aria-hidden="true" />
+                            <CheckIcon className="mx-auto h-5 w-5 text-blue-600" aria-hidden="true" />
                           ) : (
                             <XMarkIcon className="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
                           )}
@@ -425,7 +385,7 @@ export default function Example() {
                 <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden sm:block">
                   <div
                     className={classNames(
-                      plan.featured ? 'ring-2 ring-indigo-600' : 'ring-1 ring-black ring-opacity-5',
+                      plan.featured ? 'ring-2 ring-blue-600' : 'ring-1 ring-black ring-opacity-5',
                       'absolute right-0 w-1/2 h-full rounded-lg'
                     )}
                   />
@@ -454,9 +414,9 @@ export default function Example() {
                 className={classNames(planIdx === plans.length - 1 ? '' : 'pr-4', '-mt-px pl-4 w-1/4')}
               >
                 <div
-                  className={classNames(plan.featured ? 'border-indigo-600' : 'border-transparent', 'py-6 border-t-2')}
+                  className={classNames(plan.featured ? 'border-blue-600' : 'border-transparent', 'py-6 border-t-2')}
                 >
-                  <p className={classNames(plan.featured ? 'text-indigo-600' : 'text-gray-900', 'text-sm font-bold')}>
+                  <p className={classNames(plan.featured ? 'text-blue-600' : 'text-gray-900', 'text-sm font-bold')}>
                     {plan.title}
                   </p>
                   <p className="mt-2 text-sm text-gray-500">{plan.description}</p>
@@ -512,7 +472,7 @@ export default function Example() {
                           {typeof tier.value === 'string' ? (
                             <span
                               className={classNames(
-                                tier.featured ? 'text-indigo-600' : 'text-gray-900',
+                                tier.featured ? 'text-blue-600' : 'text-gray-900',
                                 'text-sm font-medium'
                               )}
                             >
@@ -521,7 +481,7 @@ export default function Example() {
                           ) : (
                             <>
                               {tier.value === true ? (
-                                <CheckIcon className="mx-auto h-5 w-5 text-indigo-600" aria-hidden="true" />
+                                <CheckIcon className="mx-auto h-5 w-5 text-blue-600" aria-hidden="true" />
                               ) : (
                                 <XMarkIcon className="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
                               )}
@@ -544,7 +504,7 @@ export default function Example() {
                 <div className="h-full w-full rounded-lg ring-1 ring-black ring-opacity-5" />
               </div>
               <div className="w-1/4 px-4">
-                <div className="h-full w-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
+                <div className="h-full w-full rounded-lg ring-2 ring-blue-600 ring-opacity-100" />
               </div>
               <div className="w-1/4 pl-4">
                 <div className="h-full w-full rounded-lg ring-1 ring-black ring-opacity-5" />
@@ -599,7 +559,7 @@ export default function Example() {
                       >
                         <span className="relative h-full w-full py-3">
                           {tier.value === true ? (
-                            <CheckIcon className="mx-auto h-5 w-5 text-indigo-600" aria-hidden="true" />
+                            <CheckIcon className="mx-auto h-5 w-5 text-blue-600" aria-hidden="true" />
                           ) : (
                             <XMarkIcon className="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
                           )}
@@ -620,7 +580,7 @@ export default function Example() {
                 <div className="h-full w-full rounded-lg ring-1 ring-black ring-opacity-5" />
               </div>
               <div className="w-1/4 px-4">
-                <div className="h-full w-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
+                <div className="h-full w-full rounded-lg ring-2 ring-blue-600 ring-opacity-100" />
               </div>
               <div className="w-1/4 pl-4">
                 <div className="h-full w-full rounded-lg ring-1 ring-black ring-opacity-5" />
