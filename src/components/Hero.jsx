@@ -13,7 +13,7 @@ return (
                     src="https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
                     alt="People working on ipad together"
                   />
-                  <div className="absolute inset-0 bg-blue-700 mix-blend-multiply" />
+                  <div className="absolute inset-0  bg-gradient-to-r from-blue-800 to-teal-800 mix-blend-multiply" />
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -34,7 +34,7 @@ return (
                       </a>
                       <a
                         href="#!"
-                        className="flex items-center justify-center rounded-md border border-transparent bg-blue-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
+                        className="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-800 to-teal-700 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 hover:from-blue-700 hover:to-teal-600 sm:px-8"
                       >
                         Live demo
                       </a>
