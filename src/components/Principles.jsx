@@ -34,7 +34,7 @@ const Principles = () => {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
             <h2 className="text-3xl font-bold tracking-tight text-white">Website support for your improvement and longevity</h2>
             <p className="mt-4 max-w-3xl text-lg text-blue-200">
-              I'm all in, all the time. Together, we can make great things happen.
+              I'm all in, all the time. Together, we will make things happen.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
               {features.map((feature) => (
