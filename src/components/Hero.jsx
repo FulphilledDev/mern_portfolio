@@ -22,18 +22,18 @@ return (
                     <span className="block text-yellow-400 mx-1">WIN</span>
                   </h1>
                   <p className="mx-auto mt-6 max-w-lg text-center text-xl text-blue-200 sm:max-w-3xl">
-                    I want us to collaborate and design a website that meets all of your desires and business needs.
+                    Collaborate with me to design a website that meets all of your business needs, and makes your business goals more possible.
                   </p>
                   <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                     <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
                       <a
-                        href="#"
+                        href="#!"
                         className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8"
                       >
                         Get Started
                       </a>
                       <a
-                        href="#"
+                        href="#!"
                         className="flex items-center justify-center rounded-md border border-transparent bg-blue-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
                       >
                         Live demo

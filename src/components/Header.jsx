@@ -1,22 +1,14 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  ArrowUturnLeftIcon,
   Bars3Icon,
   ChatBubbleBottomCenterTextIcon,
-  ChatBubbleLeftEllipsisIcon,
   ChatBubbleLeftRightIcon,
-  DocumentChartBarIcon,
-  HeartIcon,
   InboxIcon,
-  PencilSquareIcon,
   QuestionMarkCircleIcon,
-  SparklesIcon,
-  TrashIcon,
-  UsersIcon,
-  XMarkIcon,
+  XMarkIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+// import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const Header = (...classes) => {
 
@@ -58,7 +50,7 @@ const Header = (...classes) => {
           <Popover className="relative bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
+                <a href="#!">
                   <span className="sr-only">Simpson Software</span>
                   <img
                     className="h-8 w-auto sm:h-10"
@@ -141,11 +133,11 @@ const Header = (...classes) => {
                 </a>
               </Popover.Group>
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="#!" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                   Sign in
                 </a>
                 <a
-                  href="#"
+                  href="#!"
                   className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700"
                 >
                   Sign up
@@ -215,14 +207,14 @@ const Header = (...classes) => {
                     </div>
                     <div className="mt-6">
                       <a
-                        href="#"
+                        href="#!"
                         className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700"
                       >
                         Sign up
                       </a>
                       <p className="mt-6 text-center text-base font-medium text-gray-500">
                         Existing customer?
-                        <a href="#" className="text-gray-900">
+                        <a href="#!" className="text-gray-900">
                           Sign in
                         </a>
                       </p>
