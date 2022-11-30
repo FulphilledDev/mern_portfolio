@@ -210,7 +210,7 @@ export default function Example() {
                       </div>
                     </div>
                     <a
-                      href="#"
+                      href="#!"
                       className={classNames(
                         plan.featured
                           ? 'bg-blue-600 text-white hover:bg-blue-700'
