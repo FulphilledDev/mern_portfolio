@@ -1,3 +1,5 @@
+import { PopupButton } from "react-calendly";
+
 const Hero = () => {
 
 return (
@@ -17,27 +19,30 @@ return (
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Work with a developer</span>
-                    <span className="inline-block text-blue-200">that wants you to</span>
-                    <span className="block text-yellow-400 mx-1">WIN</span>
+                    <span className="block text-white">Want a website</span>
+                    <span className="inline-block text-blue-200">that represents you?</span>
+                    <span className="block text-blue-200 mx-1">Book your</span>
+                    <span className="block text-yellow-400 mx-1">FREE</span>
+                    <span className="block text-blue-200 mx-1">consult today!</span>
                   </h1>
                   <p className="mx-auto mt-6 max-w-lg text-center text-xl text-blue-200 sm:max-w-3xl">
                     Collaborate with me to design a website that meets all of your business needs, and makes your business goals more possible.
                   </p>
                   <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                     <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                      <a
-                        href="#!"
+                      <PopupButton
+                        url="https://calendly.com/simpsonsoftware/free-web-consult"
+                        rootElement={document.getElementById("root")}
+                        text="Click here to schedule!"
                         className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8"
-                      >
-                        Get Started
-                      </a>
+                      />
                       <a
                         href="#!"
                         className="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-800 to-teal-700 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 hover:from-blue-700 hover:to-teal-600 sm:px-8"
                       >
                         Live demo
                       </a>
+                      
                       {/* Insert modal of A3 website loom here */}
                     </div>
                   </div>
