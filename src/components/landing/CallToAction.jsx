@@ -1,3 +1,4 @@
+import { PopupButton } from "react-calendly";
 
 const CallToAction = () => {
   return (
@@ -6,7 +7,7 @@ const CallToAction = () => {
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               <span className="block">Ready to get started?</span>
               <span className="-mb-1 block bg-gradient-to-r from-blue-700 to-teal-600 bg-clip-text pb-1 text-transparent">
-                Get in touch or request a website.
+                Get in touch or book a consult.
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
@@ -16,12 +17,12 @@ const CallToAction = () => {
               >
                 Contact Me
               </a>
-              <a
-                href="#"
-                className="flex items-center justify-center rounded-md border border-transparent bg-blue-50 px-4 py-3 text-base font-medium text-blue-800 shadow-sm hover:bg-blue-100"
-              >
-                Get started
-              </a>
+              <PopupButton
+                url="https://calendly.com/simpsonsoftware/free-web-consult"
+                rootElement={document.getElementById("root")}
+                text="Click here to schedule!"
+                className="flex items-center w-full md:w-auto justify-center rounded-md border border-transparent bg-blue-50 px-4 py-3 text-base font-medium text-blue-800 shadow-sm hover:bg-blue-100"
+              />
             </div>
           </div>
         </div>

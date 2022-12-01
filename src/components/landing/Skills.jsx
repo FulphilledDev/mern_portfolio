@@ -1,8 +1,8 @@
-import mongodb from '../assets/images/mongodb.svg'
-import mysql from '../assets/images/mysql.svg'
-import nodejs from '../assets/images/nodejs.svg'
-import react from '../assets/images/react.svg'
-import redux from '../assets/images/redux.svg'
+import mongodb from '../../assets/images/mongodb.svg'
+import mysql from '../../assets/images/mysql.svg'
+import nodejs from '../../assets/images/nodejs.svg'
+import react from '../../assets/images/react.svg'
+import redux from '../../assets/images/redux.svg'
 
 const Skills = () => {
   return (

@@ -34,7 +34,7 @@ return (
                         url="https://calendly.com/simpsonsoftware/free-web-consult"
                         rootElement={document.getElementById("root")}
                         text="Click here to schedule!"
-                        className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8"
+                        className="flex items-center justify-center mx-auto rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8 w-full"
                       />
                       <a
                         href="#!"

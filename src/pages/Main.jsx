@@ -1,10 +1,10 @@
-import Hero from '../components/Hero'
-import Skills from '../components/Skills'
-import Testimonials from '../components/Testimonials'
-import Principles from '../components/Principles'
-import Details from '../components/Details'
+import Hero from '../components/landing/Hero'
+import Skills from '../components/landing/Skills'
+import Testimonials from '../components/landing/Testimonials'
+import Principles from '../components/landing/Principles'
+import Details from '../components/landing/Details'
 import Footer from '../components/Footer'
-import CallToAction from '../components/CallToAction'
+import CallToAction from '../components/landing/CallToAction'
 
 const Main = () => {
   return (

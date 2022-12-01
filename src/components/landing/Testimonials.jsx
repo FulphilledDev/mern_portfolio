@@ -1,4 +1,4 @@
-import A3Academy from '../assets/images/a3_logo_gray.png'
+import A3Academy from '../../assets/images/a3_logo_gray.png'
 
 const Testimonials = () => {
   return (
