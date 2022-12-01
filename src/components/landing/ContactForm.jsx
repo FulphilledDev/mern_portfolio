@@ -7,11 +7,30 @@ const ContactForm = () => {
 
     const cancelButtonRef = useRef(null)
 
-    const toggleModal = () => {
-        if (open) {
-            setOpen(false)
-        } else {
-            setOpen(true)
+    const [formState, setFormState] = useState({})
+
+    const changeHandler = (e) => {
+        setFormState({...formState, [e.target.name]: e.target.value})
+    }
+
+    const sendEmail = (e) => {
+        e.prevenDefault()
+
+        const config = {
+            SecureToken: '0497237f-02ba-4bff-aac1-39a4b395f1e6',
+            To : 'psimpsonsoftware@gmail.com',
+            From : formState.email,
+            Subject : formState.subject,
+            Body : `
+                First: ${formState.firstName}
+                Last: ${formState.lastName}
+                Phone: ${formState.phone}
+                Message: ${formState.message}
+            `
+        }
+
+        if(window.Email) {
+            window.Email.send(config).then(() => alert('Email sent successfully! Thank you!'))
         }
     }
 
@@ -65,7 +84,7 @@ const ContactForm = () => {
 
                                     <div className="grid grid-cols-1">
                                     {/* Contact information */}
-                                        <div className="relative overflow-hidden bg-blue-700 py-10 px-6 sm:px-10 xl:p-12 rounded-t-lg">
+                                        <div className="relative overflow-hidden bg-gradient-to-r from-blue-800 to-teal-700 py-10 px-6 sm:px-10 xl:p-12 rounded-t-lg">
                                             <div className="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
                                                 <svg
                                                     className="absolute inset-0 h-full w-full"
@@ -243,30 +262,34 @@ const ContactForm = () => {
 
                                         {/* Contact form */}
                                         <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                                            <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 text-start">
+                                            <form onSubmit={sendEmail} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 text-start">
                                                 <div>
-                                                    <label htmlFor="first-name" className="block text-sm font-medium text-gray-900">
+                                                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-900">
                                                         First name
                                                     </label>
                                                     <div className="mt-1">
                                                         <input
                                                             type="text"
-                                                            name="first-name"
-                                                            id="first-name"
+                                                            name="firstName"
+                                                            id="firstName"
+                                                            value={formState.firstName || ''}
+                                                            onChange={changeHandler}
                                                             autoComplete="given-name"
                                                             className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                                         />
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <label htmlFor="last-name" className="block text-sm font-medium text-gray-900">
+                                                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-900">
                                                         Last name
                                                     </label>
                                                     <div className="mt-1">
                                                         <input
                                                             type="text"
-                                                            name="last-name"
-                                                            id="last-name"
+                                                            name="lastName"
+                                                            id="lastName"
+                                                            value={formState.lastName || ''}
+                                                            onChange={changeHandler}
                                                             autoComplete="family-name"
                                                             className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                                         />
@@ -281,6 +304,8 @@ const ContactForm = () => {
                                                             id="email"
                                                             name="email"
                                                             type="email"
+                                                            value={formState.email || ''}
+                                                            onChange={changeHandler}
                                                             autoComplete="email"
                                                             className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                                         />
@@ -300,6 +325,8 @@ const ContactForm = () => {
                                                             type="text"
                                                             name="phone"
                                                             id="phone"
+                                                            value={formState.phone || ''}
+                                                            onChange={changeHandler}
                                                             autoComplete="tel"
                                                             className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                                             aria-describedby="phone-optional"
@@ -315,6 +342,8 @@ const ContactForm = () => {
                                                             type="text"
                                                             name="subject"
                                                             id="subject"
+                                                            value={formState.subject || ''}
+                                                            onChange={changeHandler}
                                                             className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                                         />
                                                     </div>
@@ -385,8 +414,10 @@ const ContactForm = () => {
                                                         <textarea
                                                             id="message"
                                                             name="message"
+                                                            value={formState.message || ''}
+                                                            onChange={changeHandler}
                                                             rows={4}
-                                                            className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                                            className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                                             aria-describedby="message-max"
                                                             defaultValue={''}
                                                         />
@@ -395,7 +426,7 @@ const ContactForm = () => {
                                                 <div className="sm:col-span-2 sm:flex sm:justify-center gap-3">
                                                     <button
                                                         type="submit"
-                                                        className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                                        className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-800 to-teal-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                                     >
                                                         Submit
                                                     </button>
@@ -421,13 +452,7 @@ const ContactForm = () => {
             </div>
         </Dialog>
         </Transition.Root>
-
-        <div className="bg-gray-100">
-            
-        </div>
-    </>
-    
-              
+    </>         
   )
 }
 
