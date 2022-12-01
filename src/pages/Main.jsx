@@ -12,9 +12,9 @@ const Main = () => {
   return (
     <div>
       <Hero />
-      <Skills />
-      <Principles />
       <Testimonials />
+      <Principles />
+      <Skills />
       <Pricing />
       {/* <RequestForm/> */}
       <CallToAction />
