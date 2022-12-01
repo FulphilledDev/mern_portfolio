@@ -1,6 +1,18 @@
+import { useState } from 'react';
 import { PopupButton } from "react-calendly";
+import ContactForm from './ContactForm';
 
 const CallToAction = () => {
+  const [openContact, setOpenContact] = useState('closed')
+
+  const toggleContact = () => {
+    if (openContact === 'closed') {
+      setOpenContact('open')
+    } else {
+      setOpenContact('closed')
+    }
+  }
+
   return (
     <div className="bg-white">
           <div className="mx-auto max-w-4xl py-16 px-4 sm:px-6 sm:py-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-between lg:px-8">
@@ -11,12 +23,12 @@ const CallToAction = () => {
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
-              <a
-                href="#"
+              <button
+                onClick={toggleContact}
                 className="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 to-teal-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-blue-600 hover:to-teal-500"
               >
                 Contact Me
-              </a>
+              </button>
               <PopupButton
                 url="https://calendly.com/simpsonsoftware/free-web-consult"
                 rootElement={document.getElementById("root")}
@@ -25,6 +37,8 @@ const CallToAction = () => {
               />
             </div>
           </div>
+          {openContact === 'open' ? ( <ContactForm />
+          ) : null}
         </div>
   )
 }
