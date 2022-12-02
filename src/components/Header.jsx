@@ -30,11 +30,13 @@ const Header = (...classes) => {
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                   <span className="sr-only">Simpson Software</span>
-                  <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/mark.svg?from-color=blue&from-shade=600&to-color=teal&to-shade=600&toShade=600"
-                    alt=""
-                  />
+                  <a href='/'>
+                    <img
+                      className="h-8 w-auto sm:h-10"
+                      src="https://tailwindui.com/img/logos/mark.svg?from-color=blue&from-shade=600&to-color=teal&to-shade=600&toShade=600"
+                      alt=""
+                    />
+                  </a>
               </div>
               <div className="-my-2 -mr-2 md:hidden">
                 <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
