@@ -2,9 +2,6 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  ChatBubbleBottomCenterTextIcon,
-  ChatBubbleLeftRightIcon,
-  InboxIcon,
   QuestionMarkCircleIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
@@ -57,9 +54,6 @@ const Header = (...classes) => {
                 </a>
                 <a href="/projects" className="text-base font-medium text-gray-500 hover:text-gray-900">
                   Projects
-                </a>
-                <a href="/blog" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Blog
                 </a>
               </Popover.Group>
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
@@ -131,9 +125,6 @@ const Header = (...classes) => {
                     <div className="grid grid-cols-2 gap-4">
                       <a href="/projects" className="text-base font-medium text-gray-900 hover:text-gray-700">
                         Projects
-                      </a>
-                      <a href="/blog" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Blog
                       </a>
                     </div>
                     <div className="mt-6">
