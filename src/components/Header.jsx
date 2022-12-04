@@ -3,24 +3,27 @@ import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
   QuestionMarkCircleIcon,
+  BriefcaseIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
-// import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import IconOnly  from '../assets/images/IconOnly.png'
 
-const Header = (...classes) => {
+const Header = () => {
 
   const solutions = [
   {
     name: 'FAQs',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#!',
+    description: "",
+    href: '/faqs',
     icon: QuestionMarkCircleIcon,
   },
+  {
+    name: 'Projects',
+    description: ".",
+    href: '/projects',
+    icon: BriefcaseIcon,
+  },
 ]
-
-    const classNames = () => {
-      return classes.filter(Boolean).join(' ')
-    }
     
   return (
     <>
@@ -32,8 +35,8 @@ const Header = (...classes) => {
                   <span className="sr-only">Simpson Software</span>
                   <a href='/'>
                     <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/mark.svg?from-color=blue&from-shade=600&to-color=teal&to-shade=600&toShade=600"
+                      className="h-8 w-auto sm:h-10 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700"
+                      src={IconOnly}
                       alt=""
                     />
                   </a>
@@ -45,28 +48,16 @@ const Header = (...classes) => {
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-                
-                {/* 
-                  
-                  NavBar Links 
-                  
-                */}
-                <a href="/faqs" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  FAQs
-                </a>
-                <a href="/projects" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Projects
-                </a>
               </Popover.Group>
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                <a href="#!" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                  Sign in
+                <a href="/faqs" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                  FAQs
                 </a>
                 <a
-                  href="#!"
+                  href="/projects"
                   className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700"
                 >
-                  Sign up
+                  Projects
                 </a>
               </div>
             </div>
@@ -121,27 +112,6 @@ const Header = (...classes) => {
                           </a>
                         ))}
                       </nav>
-                    </div>
-                  </div>
-                  <div className="py-6 px-5">
-                    <div className="grid grid-cols-2 gap-4">
-                      <a href="/projects" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Projects
-                      </a>
-                    </div>
-                    <div className="mt-6">
-                      <a
-                        href="#!"
-                        className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700"
-                      >
-                        Sign up
-                      </a>
-                      <p className="mt-6 text-center text-base font-medium text-gray-500">
-                        Existing customer?
-                        <a href="#!" className="text-gray-900">
-                          Sign in
-                        </a>
-                      </p>
                     </div>
                   </div>
                 </div>
