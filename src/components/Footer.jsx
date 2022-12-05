@@ -7,13 +7,12 @@ const Footer = () => {
             { name: 'FAQs', href: '/faqs' }
         ],
         company: [
-            { name: 'Projects', href: '#' },
-            { name: 'Blog', href: '#' },
-            { name: 'Testimonials', href: '#' },
+            { name: 'Projects', href: '/projects' },
+            { name: 'Testimonials', href: '#testimonials' },
         ],
         legal: [
-            { name: 'Contract', href: '#' },
-            { name: 'Proposal', href: '#' },
+            { name: 'Contract', href: '/' },
+            { name: 'Proposal', href: '/' },
         ],
         social: [
             // {
