@@ -30,8 +30,8 @@ const features = [
 
 const Principles = () => {
   return (
-        <div className="bg-gradient-to-r from-blue-800 to-teal-700">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
+        <div className="border-t rounded-t-lg bg-gradient-to-r from-blue-800 to-teal-700">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-bold tracking-tight text-white">Website support for your improvement and longevity</h2>
             <p className="mt-4 max-w-3xl text-lg text-blue-200">
               I'm all in, all the time. Together, we will make things happen.

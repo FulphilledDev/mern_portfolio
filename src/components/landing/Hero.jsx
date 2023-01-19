@@ -20,9 +20,8 @@ return (
 <main>
         <div>
           <div className="relative">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-              <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
+            <div className="mx-auto">
+              <div className="relative shadow-xl sm:overflow-hidden border rounded-lg">
                 <div className="absolute inset-0">
                   <img
                     className="h-full w-full object-cover"
@@ -33,8 +32,7 @@ return (
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Want a website</span>
-                    <span className="inline-block text-blue-200">that represents you?</span>
+                    <span className="block text-white">Need a website?</span>
                     <span className="block text-blue-200 mx-1">Book your</span>
                     <span className="block text-yellow-400 mx-1">FREE</span>
                     <span className="block text-blue-200 mx-1">consult today!</span>
@@ -48,9 +46,9 @@ return (
                         url="https://calendly.com/simpsonsoftware/free-web-consult"
                         rootElement={document.getElementById("root")}
                         text="Click here to schedule!"
-                        className="flex items-center justify-center mx-auto rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8 w-full"
+                        className="sm:col-span-2 flex items-center justify-center mx-auto rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8 w-full"
                       />
-                      <button
+                      {/* <button
                         onClick={showDemo}
                         className="flex items-center justify-center mx-auto rounded-md border border-transparent bg-gradient-to-r from-blue-800 to-teal-700 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 hover:from-blue-700 hover:to-teal-600 sm:px-8 w-full"
                       >
@@ -111,7 +109,7 @@ return (
                               </div>
                             </Dialog>
                           </Transition.Root>
-                      ) : null}
+                      ) : null} */}
                     </div>
                   </div>
                 </div>

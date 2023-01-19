@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <div>
       {/* Logo cloud */}
-          <div className="bg-gray-100">
+          <div className="bgwhite">
             <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
               <p className="text-center text-base font-semibold text-gray-500">
                 Programming Languages
