@@ -1,18 +1,8 @@
-import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid'
-
-{/* TODO: Replace/Remove: priceMonthly/Yearly --> startingAt  */}
-{/* TODO: Create request form for Single-Page */}
-{/* TODO: Create request form for Multi-Page */}
-{/* TODO: Create request form for Full-Stack */}
-{/* TODO: Create a quote calculator for site request
-    -- Include: prices per page, section, functionality, etc. */}
-
-
+import { CheckIcon } from '@heroicons/react/20/solid'
 
 
 const plans = [
   {
-    title: 'MySQL / MongoDB',
     category: 'DATABASES',
     featured: false,
     description: 'Backend AKA The backbone',
@@ -24,7 +14,6 @@ const plans = [
     ],
   },
   {
-    title: 'React',
     category: 'FRAMEWORKS',
     featured: true,
     description: 'Frontend AKA What\'s seen',
@@ -39,7 +28,6 @@ const plans = [
     ],
   },
   {
-    title: 'Redux / NodeJS',
     category: 'MIDDLEWARE & SERVERS',
     featured: false,
     description: 'Security & Access AKA The bridges',
@@ -87,18 +75,13 @@ export default function Example() {
           <div className="relative space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0">
             {plans.map((plan) => (
               <div
-                key={plan.title}
+                key={plan.category}
                 className={classNames(
                   plan.featured ? 'bg-white ring-2 ring-blue-700 shadow-md' : 'bg-blue-700 lg:bg-transparent',
                   'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
                 )}
               >
                 <div>
-                  <h3
-                    className={classNames(plan.featured ? 'text-blue-600' : 'text-white', 'text-base font-semibold mb-1')}
-                  >
-                    {plan.title}
-                  </h3>
                   <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
                     <span
                       className={classNames(
