@@ -61,11 +61,10 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <div className="bg-gray-50">
-      <div className="relative bg-gradient-to-r from-blue-800 to-teal-700">
+      <div className="border-b rounded-b-lg bg-gradient-to-r from-blue-800 to-teal-700">
         {/* Overlapping background */}
-        <div aria-hidden="true" className="absolute bottom-0 hidden h-6 w-full bg-gray-50 lg:block" />
 
-        <div className="relative mx-auto max-w-2xl px-4 pt-16 text-center sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-4 py-4 text-center sm:px-6 lg:max-w-7xl">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
             <span className="block lg:inline">Simple details,</span>
             <span className="block lg:inline mx-2">desired results.</span>
@@ -82,7 +81,7 @@ export default function Example() {
           {/* Decorative background */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 top-4 bottom-6 left-8 right-8 hidden rounded-tl-lg rounded-tr-lg bg-gradient-to-r from-blue-700 to-teal-600 lg:block"
+            className="absolute inset-0 top-4 bottom-6 left-8 right-8 hidden rounded-lg rounded-tr-lg bg-gradient-to-r from-blue-700 to-teal-600 lg:block"
           />
 
           <div className="relative space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0">
@@ -113,7 +112,7 @@ export default function Example() {
                     </span>
                   </div>
                 </div>
-                <div className=''>
+                <div>
                     <span
                       className={classNames(plan.featured ? 'text-blue-600' : 'text-white text-center', 'flex my-2 text-base font-semibold sm:justify-center md:justify-start lg:justify-center')}
                     >
@@ -122,7 +121,6 @@ export default function Example() {
                   </div>
                 <h4 className="sr-only">Features</h4>
                 <ul
-                  role="list"
                   className={classNames(
                     plan.featured
                       ? 'border-gray-200 divide-gray-200'

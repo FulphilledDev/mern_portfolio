@@ -22,10 +22,10 @@ const CallToAction = () => {
                 Get in touch or book a consult.
               </span>
             </h2>
-            <div className="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
+            <div className="mt-6 space-y-4 w-full lg:w-1/4 gap-4 flex lg:flex-col justify-around flex-no-wrap sm:space-y-0 grid grid-cols-2 lg:grid-cols-1">
               <button
                 onClick={toggleContact}
-                className="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 to-teal-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-blue-600 hover:to-teal-500"
+                className="col-span-2 md:col-span-1 flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 to-teal-600 bg-origin-border py-3 text-base font-medium text-white shadow-sm hover:from-blue-600 hover:to-teal-500"
               >
                 Contact Me
               </button>
@@ -33,7 +33,7 @@ const CallToAction = () => {
                 url="https://calendly.com/simpsonsoftware/free-web-consult"
                 rootElement={document.getElementById("root")}
                 text="Click here to schedule!"
-                className="flex items-center w-full md:w-auto justify-center rounded-md border border-transparent bg-blue-50 px-4 py-3 text-base font-medium text-blue-800 shadow-sm hover:bg-blue-100"
+                className="col-span-2 md:col-span-1 flex items-center justify-center rounded-md border border-transparent bg-blue-50 py-3 text-base font-medium text-blue-800 shadow-sm hover:bg-blue-100"
               />
             </div>
           </div>
