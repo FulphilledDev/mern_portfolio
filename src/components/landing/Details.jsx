@@ -13,9 +13,9 @@ import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid'
 const plans = [
   {
     title: 'MySQL / MongoDB',
-    category: 'Backend Databases',
+    category: 'DATABASES',
     featured: false,
-    description: 'The backbone of any application or website ',
+    description: 'Backend AKA The backbone',
     mainFeatures: [
       { id: 1, value: 'Provides structure' },
       { id: 2, value: 'Stores information securely' },
@@ -25,9 +25,9 @@ const plans = [
   },
   {
     title: 'React',
-    category: 'Frontend Frameworks',
+    category: 'FRAMEWORKS',
     featured: true,
-    description: 'What the users see',
+    description: 'Frontend AKA What\'s seen',
     mainFeatures: [
       { id: 1, value: 'Visually appealing pages' },
       { id: 2, value: 'Smooth user experiences' },
@@ -40,9 +40,9 @@ const plans = [
   },
   {
     title: 'Redux / NodeJS',
-    category: 'Middleware & Servers',
+    category: 'MIDDLEWARE & SERVERS',
     featured: false,
-    description: 'The bridge of communication that holds everything together',
+    description: 'Security & Access AKA The bridges',
     mainFeatures: [
       { id: 1, value: 'Retrieve information' },
       { id: 2, value: 'Error & Access handling' },
