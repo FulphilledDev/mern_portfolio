@@ -1,8 +1,9 @@
 import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import { Menu, Popover, Transition } from '@headlessui/react'
+import { Link } from 'react-router-dom'
 import {
   Bars3Icon,
-  QuestionMarkCircleIcon,
+  UserIcon,
   BriefcaseIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
@@ -10,56 +11,55 @@ import IconOnly  from '../assets/images/IconOnly.png'
 
 const Header = () => {
 
-  const solutions = [
-  {
-    name: 'FAQs',
-    description: "",
-    href: '/faqs',
-    icon: QuestionMarkCircleIcon,
-  },
-  {
-    name: 'Projects',
-    description: ".",
-    href: '/projects',
-    icon: BriefcaseIcon,
-  },
-]
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
     
   return (
     <>
-      <div className="bg-white">
-        <header>
-          <Popover className="relative bg-white">
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
-              <div className="flex justify-start lg:w-0 lg:flex-1">
-                  <span className="sr-only">Simpson Software</span>
-                  <a href='/'>
+      <header>
+          <Popover className="relative bg-white px-2">
+            <div className="mx-auto flex max-w-full items-center justify-between py-6 md:justify-start ">
+              <div className="flex items-center gap-4">
+                  <Link to='/' className='flex justify-start gap-3 items-center md:border-r-2 md:border-gray-700 md:pr-4'>
                     <img
-                      className="h-8 w-auto sm:h-10 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700"
+                      className="h-8 w-auto sm:h-10 rounded-full object-cover"
                       src={IconOnly}
-                      alt=""
+                      alt="Simpson Software"
                     />
+                    <span className="font-medium text-blue-800 rounded-md hover:text-teal-700 hover:underline">Simpson Software</span>
+                  </Link>
+                  <Link to="/projects" className="hidden md:flex whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                    Projects
+                  </Link>
+                  <a href="https://fulphilleddev.github.io/resume-website/" target="_blank" rel="noopener noreferrer" className="hidden md:flex whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                    Resume
                   </a>
               </div>
               <div className="-my-2 -mr-2 md:hidden">
-                <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
+                <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                   <span className="sr-only">Open menu</span>
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden space-x-10 md:flex">
               </Popover.Group>
-              <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                <a href="/faqs" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                  FAQs
-                </a>
-                <a
-                  href="/projects"
-                  className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700"
-                >
-                  Projects
-                </a>
-              </div>
+              
+                  <>
+                    <div className='hidden items-center justify-end md:flex md:flex-1 lg:w-0'>
+                      {/* {cartState && cartState.length > 0 && (
+                        <button onClick={toggleCartIcon} className="flex gap-1 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                          <ShoppingCartIcon className="h-6 w-6"  />{cartState ? cartState.length : 0}
+                        </button>
+                      )} */}
+                      <button
+                        type='button'
+                        className='ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700'>
+                        Get Started
+                      </button>
+                    </div>
+                  </>
+               
             </div>
 
             <Transition
@@ -73,7 +73,7 @@ const Header = () => {
             >
               {/* 
 
-                Phone Screens w/ Sidebar Menu
+                Phone Screens
 
               */}
               <Popover.Panel
@@ -83,15 +83,16 @@ const Header = () => {
                 <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="px-5 pt-5 pb-6">
                     <div className="flex items-center justify-between">
-                      <div>
+                      <Link to='/' className='flex justify-start gap-3 items-center md:border-r-2 md:border-gray-700 md:pr-4'>
                         <img
                           className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/mark.svg?from-color=blue&from-shade=600&to-color=teal&to-shade=600&toShade=600"
+                          src={IconOnly}
                           alt="Your Company"
                         />
-                      </div>
+                        <span className="font-medium text-blue-800 rounded-md hover:text-teal-700 hover:underline hover:pointer">Simpson Software</span>
+                      </Link>
                       <div className="-mr-2">
-                        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
+                        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                           <span className="sr-only">Close menu</span>
                           <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
@@ -99,18 +100,21 @@ const Header = () => {
                     </div>
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
-                        {solutions.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
-                          >
-                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-teal-600 text-white">
-                              <item.icon className="h-6 w-6" aria-hidden="true" />
-                            </div>
-                            <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
-                          </a>
-                        ))}
+                        <Link
+                          to='/projects'
+                          className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+                        >
+                          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-teal-600 text-white">
+                            <BriefcaseIcon className="h-6 w-6" aria-hidden="true" />
+                          </div>
+                          <div className="ml-4 text-base font-medium text-gray-900">Projects</div>
+                        </Link>
+                        <a href="https://fulphilleddev.github.io/resume-website/" target="_blank" rel="noopener noreferrer" className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
+                          <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-teal-600 text-white'>
+                            <UserIcon className="h-6 w-6" aria-hidden="true" />
+                          </div>
+                          <div className="ml-4 text-base font-medium text-gray-900">Resume</div>
+                        </a>
                       </nav>
                     </div>
                   </div>
@@ -119,7 +123,6 @@ const Header = () => {
             </Transition>
           </Popover>
         </header>
-        </div>
       </>
   )
 }
