@@ -1,19 +1,19 @@
-import { Fragment, useState } from 'react';
+// import { Fragment, useState } from 'react';
 import { PopupButton } from "react-calendly";
-import { Dialog, Transition } from '@headlessui/react'
-import LiveDemo from './LiveDemo';
+// import { Dialog, Transition } from '@headlessui/react'
+// import LiveDemo from './LiveDemo';
 
 const Hero = () => {
 
-  const [liveDemo, setLiveDemo] = useState(false)
+  // const [liveDemo, setLiveDemo] = useState(false)
 
-  const showDemo = () => {
-    if (!liveDemo) {
-      setLiveDemo(true)
-    } else {
-      setLiveDemo(false)
-    }
-  }
+  // const showDemo = () => {
+  //   if (!liveDemo) {
+  //     setLiveDemo(true)
+  //   } else {
+  //     setLiveDemo(false)
+  //   }
+  // }
 
 
 return (
