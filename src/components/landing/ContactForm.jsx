@@ -18,7 +18,7 @@ const ContactForm = () => {
 
         const config = {
             SecureToken: '0497237f-02ba-4bff-aac1-39a4b395f1e6',
-            To : 'psimpsonsoftware@gmail.com',
+            To : 'philip@simpsonsoftware.site',
             From : formState.email,
             Subject : formState.subject,
             Body : `
@@ -61,7 +61,7 @@ const ContactForm = () => {
                     leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                     leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                <Dialog.Panel className="bg-gray-100 relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6">
+                <Dialog.Panel className="bg-gray-100 relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl sm:p-6">
                     <div>
                     
                         <div className="mt-3 text-center sm:mt-5">

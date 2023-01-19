@@ -37,7 +37,7 @@ return (
                     <span className="block text-yellow-400 mx-1">FREE</span>
                     <span className="block text-blue-200 mx-1">consult today!</span>
                   </h1>
-                  <p className="mx-auto mt-6 max-w-lg text-center text-xl text-blue-200 sm:max-w-3xl">
+                  <p className="mx-auto mt-6 max-w-lg text-center text-xl text-blue-100 font-medium sm:max-w-3xl">
                     Collaborate with me to design a website that meets all of your business needs, and makes your business goals more possible.
                   </p>
                   <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
