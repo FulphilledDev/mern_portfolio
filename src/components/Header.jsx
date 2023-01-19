@@ -45,20 +45,16 @@ const Header = () => {
               <Popover.Group as="nav" className="hidden space-x-10 md:flex">
               </Popover.Group>
               
-                  <>
+                  {/* <>
                     <div className='hidden items-center justify-end md:flex md:flex-1 lg:w-0'>
-                      {/* {cartState && cartState.length > 0 && (
-                        <button onClick={toggleCartIcon} className="flex gap-1 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                          <ShoppingCartIcon className="h-6 w-6"  />{cartState ? cartState.length : 0}
-                        </button>
-                      )} */}
                       <button
                         type='button'
-                        className='ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700'>
+                        className='ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-teal-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-teal-700'
+                        disabled>
                         Get Started
                       </button>
                     </div>
-                  </>
+                  </> */}
                
             </div>
 
